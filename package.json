@@ -1,0 +1,16 @@
+{
+    "scripts": {
+      "bundle": "webpack --config webpack.config.js"
+    },
+    "dependencies": {
+      "jsonwebtoken": "^8.5.1",
+      "aws4": "1.12.0"
+    },
+    "devDependencies": {
+      "eslint": "^8.32.0",
+      "eslint-config-airbnb-base": "^15.0.0",
+      "eslint-plugin-import": "^2.27.5",
+      "webpack": "^4.32.2",
+      "webpack-cli": "^3.3.2"
+    }
+  }
