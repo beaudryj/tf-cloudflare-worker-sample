@@ -35,9 +35,12 @@ data "local_file" "worker" {
 }
 
 resource "null_resource" "webpack" {
+  count = var.enable_webpack_bundle ? 1 : 0
+
   triggers = {
     always_run = "${timestamp()}"
   }
+
   provisioner "local-exec" {
     command = <<-EOF
       cd ${path.module} &&\

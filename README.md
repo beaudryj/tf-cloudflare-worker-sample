@@ -1,3 +1,18 @@
+# Terraform Configuration for Cloudflare Workers
+
+This Terraform configuration sets up Cloudflare Workers for a given domain. It includes configurations for providers, resources, and data sources.
+
+## Files Overview
+
+1. `backend.tf`: Contains provider and backend configurations.
+2. `cloudflare.tf`: Defines Cloudflare Worker Script, routes, and the local file dependencies.
+3. `data.tf`: Provides data sources used in the configuration.
+4. `variables.tf`: Lists the variables required for the configuration.
+
+
+# Note: 
+- This code is setup with a null resource that is able to run code directly on Terraform cloud without needing a CI job for npm. (However that can be toggled off and be run in a standard pipeline)
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
@@ -33,6 +48,7 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_cloudflare_account_id"></a> [cloudflare\_account\_id](#input\_cloudflare\_account\_id) | n/a | `any` | n/a | yes |
 | <a name="input_cloudflare_api_key"></a> [cloudflare\_api\_key](#input\_cloudflare\_api\_key) | Cloudflare | `any` | n/a | yes |
+| <a name="input_enable_webpack_bundle"></a> [enable\_webpack\_bundle](#input\_enable\_webpack\_bundle) | Toggle to determine if webpack bundling should be done | `bool` | `false` | no |
 | <a name="input_env"></a> [env](#input\_env) | n/a | `any` | n/a | yes |
 
 ## Outputs
