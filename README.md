@@ -11,7 +11,7 @@ This Terraform configuration sets up Cloudflare Workers for a given domain. It i
 
 
 # Note: 
-- This code is setup with a null resource that is able to run code directly on Terraform cloud without needing a CI job for npm. (However that can be toggled off and be run in a standard pipeline)
+- This code is setup with a [null resource](https://github.com/beaudryj/tf-cloudflare-worker-sample/blob/main/cloudflare.tf#L37) that is able to run code directly on Terraform cloud without needing a CI job for npm. (However that can be toggled off and be run in a standard pipeline)
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
